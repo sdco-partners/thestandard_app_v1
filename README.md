@@ -22,28 +22,28 @@ Copyright 2017 SDCO Partners
 Follow these steps to configure your install to your specific project.
 
 1. WP-CONFIG.PHP
-  * set var $local_path 
+  * [ ] set var $local_path 
 2. LOCAL-CONFIG-EXAMPLE.PHP
-  * remove '-example' from end of filepath
-  * set DB_NAME 
-  * set DB_USER 
-  * set DB_PASSWORD
+  * [ ] remove '-example' from end of filepath
+  * [ ] set DB_NAME 
+  * [ ] set DB_USER 
+  * [ ] set DB_PASSWORD
 3. PACKAGE.JSON
-  * set 'name' 
-  * set 'description' 
-  * set 'url' for both 'repository' and 'bugs'
-  * set 'homepage' 
+  * [ ] set 'name' 
+  * [ ] set 'description' 
+  * [ ] set 'url' for both 'repository' and 'bugs'
+  * [ ] set 'homepage' 
 4. GULPFILE.JS
-  * set var uri in line 75
+  * [ ] set var uri in line 75
 5. .GITIGNORE-EXAMPLE
-  * remove '-example' from end of filepath
-  * set filepath to inner CONFIG.PHP on line 75
+  * [ ] remove '-example' from end of filepath
+  * [ ] set filepath to inner CONFIG.PHP on line 75
 6. THEME FILES & FOLDERS
-  * rename folder 'INIT' 
-  * set 'Theme Name' and 'Theme URI' in STYLE.CSS
-  * set var $GLOBALS['root'] and $GLOBALS['docpath'] in FUNCTIONS.PHP
-  * set var $uri in _VARIABLES.SASS, 2 points
-  * set @link and @package notes on all template files.
+  * [ ] rename folder 'INIT' 
+  * [ ] set 'Theme Name' and 'Theme URI' in STYLE.CSS
+  * [ ] set var $GLOBALS['root'] and $GLOBALS['docpath'] in FUNCTIONS.PHP
+  * [ ] set var $uri in _VARIABLES.SASS, 2 points
+  * [ ] set @link and @package notes on all template files.
 
 
 #### Starting/Editing Current Project
