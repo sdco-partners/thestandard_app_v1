@@ -1,30 +1,59 @@
-# ignore YeoPress configuration file since it contains password information
-.yeopress
+# ignore everything in root except for content
+!content/
 
-# As Yeoman assumes the usage of Bower and Grunt, ignore the below:
-bower_components
-node_modules
+# ignore all files starting with .
+.*
 
-# Ignore automatically generated cruft
-*.log
-.sass-cache
+# DON'T ignore tooling config files
+!.gitignore
+!.editorconfig
+!readme.md
 
-# Ignore config
-local-config.php
+# ignore all files starting with ~
+~*
 
-
-# Operating system files
+# ignore OS generated files
+ehthumbs.db
+Thumbs.db
 .Spotlight-V100
 .Trashes
 .DS_Store
 .DS_Store?
-ehthumbs.db
-Thumbs.db
+
+# ignore Editor files
+*.sublime-project
+*.sublime-workshop
+*.komodoproject
+
+# ignore log files
+*.log
+*.sql
+*.sqlite
+.sass-cache
+error_log
+
+# ignore everything inside content execept for Themes and Plugins
+content/*
+!content/mu-plugins/
+!content/plugins/
+!content/themes/
+
+
+# ignore YeoPress configuration file since it contains password information
+.yeopress
+
+# ignore dependencies
+bower_components/
+node_modules/
+
+# ignore WP config
+local-config.php
+wp-config.php
 
 # Vagrant
 .vagrant
 
-# WordPress + popular plugin generated — adapted from:
+# ignore WordPress + popular plugin generated — adapted from:
 # https://github.com/github/gitignore/blob/master/WordPress.gitignore
 sitemap.xml
 sitemap.xml.gz
@@ -37,3 +66,10 @@ content/uploads/
 content/upgrade/
 content/wp-cache-config.php
 
+/vendor/
+
+# ignore BIG files
+*.mp4
+
+# ignore config
+content/themes/[init]/config.php

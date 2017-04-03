@@ -1,0 +1,34 @@
+{
+  "name": "[INIT]",
+  "version": "1.0.0",
+  "description": "[INIT]",
+  "main": "index.js",
+  "scripts": {
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "[INIT]"
+  },
+  "author": "SDCO Partners",
+  "license": "ISC",
+  "bugs": {
+    "url": "[INIT]"
+  },
+  "homepage": "[INIT]",
+  "devDependencies": {
+    "gulp": "^3.9.1",
+    "gulp-clean-css": "^2.1.1",
+    "gulp-concat": "^2.6.1",
+    "gulp-livereload": "^3.8.1",
+    "gulp-modernizr": "^1.0.0-alpha",
+    "gulp-notify": "^3.0.0",
+    "gulp-plumber": "^1.1.0",
+    "gulp-sass": "^2.3.2",
+    "gulp-sourcemaps": "^1.9.1",
+    "gulp-uglify": "^2.0.0",
+    "jquery": "^3.1.1",
+    "modernizr": "^3.3.1"
+  },
+  "dependencies": {}
+}
