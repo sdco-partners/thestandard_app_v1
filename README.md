@@ -92,8 +92,9 @@ Follow these steps to configure your install to your specific project.
   * [ ]  set var $GLOBALS['root'] and $GLOBALS['docpath'] in FUNCTIONS.PHP
   * [ ]  set var $uri in _VARIABLES.SASS, 2 points
   * [ ]  set @link and @package notes on all template files.
-7. WORDPRESS SUBMODULE
-  * [ ]  Run `git submodule update --init`
+7. SET UP DUMMY DATABE
+  * [x]  create db and user
+  * [x]  import dummy wordpress db
 
 
 ### Editing Current Project
