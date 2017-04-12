@@ -71,6 +71,7 @@ Follow these steps to configure your install to your specific project.
 
 1. WP-CONFIG.PHP
   * [ ]  set var $local_path 
+  * [ ]  set var $table_prefix  
 2. LOCAL-CONFIG-EXAMPLE.PHP
   * [ ]  remove '-example' from end of filepath
   * [ ]  set DB_NAME 
