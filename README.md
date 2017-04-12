@@ -3,6 +3,7 @@ Copyright 2017 SDCO Partners
 
 1. Getting Started 
   * Folder Structure
+  * Starting with [INIT]
   * Initializing New Project
   * Starting/Editing Current Project
   * Deployment
@@ -55,6 +56,15 @@ Copyright 2017 SDCO Partners
 └-- style.css 
 ```
 
+### Starting With [INIT]
+1. CREATE NEW BLANK REPOSITORY
+  * [ ]  Create new blank repo. Do not initiate with a README file.
+  * [ ]  Clone repo to local environment 
+2. CREATE A INIT REMOTE & PULL DOWN INIT FILES
+  * [ ]  Run `git remote add init` + INIT repo url
+  * [ ]  Run `git pull init master`
+3. PULL DOWN WORDPRESS SUBMODULE FILES
+  * [ ]  Run `git submodule update --init`
 
 ### Initializing New Project
 Follow these steps to configure your install to your specific project.
