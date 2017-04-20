@@ -93,8 +93,8 @@ Follow these steps to configure your install to your specific project.
   * [ ]  set var $uri in _VARIABLES.SASS, 2 points
   * [ ]  set @link and @package notes on all template files.
 7. SET UP DUMMY DATABE
-  * [x]  create db and user
-  * [x]  import dummy wordpress db
+  * [ ]  create db and user
+  * [ ]  import dummy wordpress db
 
 
 ### Editing Current Project
@@ -128,6 +128,7 @@ If updating JS files ...
   * Replace the `scripts.js` file on server with your compiled file.
 For All other files ...
   * Replace server file with your changed file.
+  * Git commit and git push to server
 
 ### Feature Documentation
 
