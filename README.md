@@ -94,6 +94,8 @@ Follow these steps to configure your install to your specific project.
 7. SET UP DUMMY DATABE
   * [ ]  create db and user
   * [ ]  import dummy wordpress db
+8. INSTALL DEPENDENCIES 
+  * [ ]  Run `npm install`
 
 
 ### Editing Current Project
