@@ -7,7 +7,7 @@ var gulp = require("gulp")
 , plumber = require('gulp-plumber')
 , notify = require('gulp-notify')
 , livereload = require('gulp-livereload')
-, babel = require('gulp-babel');
+, babel = require('gulp-babel')
 , modernizr = require('gulp-modernizr');
 
 
@@ -38,7 +38,7 @@ gulp.task('styles', function() {
 	gulp.src(paths.styles)
 	  .pipe(plumber(plumberErrorHandler))
 	  .pipe(sass())
-    .pipe(clean())
+          .pipe(clean())
 	  .pipe(gulp.dest(paths.dest))
 	  .pipe(livereload());
 });
@@ -48,8 +48,8 @@ gulp.task('uglify', function() {
 	gulp.src(paths.js)
 		.pipe(plumber(plumberErrorHandler))
 		.pipe(babel({
-        presets: ['es2015']
-		  })
+                  presets: ['es2015']
+		  }))
 		.pipe(concat('scripts.js'))
 	  .pipe(uglify())
 	  .pipe(gulp.dest(paths.dest))
