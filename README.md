@@ -5,8 +5,8 @@ Copyright 2017 SDCO Partners
   * Folder Structure
   * Starting with [INIT]
   * Initializing New Project
-  * Starting/Editing Current Project
-  * Deployment
+  * Editing Current Project
+  * Deploying To Server
   * Updates
   * Feature Documentation
 2. Dev Environment
@@ -117,6 +117,29 @@ Follow these steps to edit a current project. This will set up the repository an
 4. Use Migrate DB to fetch content from server
   * [ ]  Follow prompts 
 
+### Deploying to Server
+1. In Liquid Web ...
+  * [ ]  Create account for new site
+2. Connect to Server
+  * [ ]  Upload folder `/wordpress/` to `/public_html/`
+  * [ ]  Upload folder `/content/` to `/public_html/`
+  * [ ]  Upload file `wp-config.php` to `/public_html/`
+  * [ ]  Upload file `local-config.php` to `/public_html/`
+  * [ ]  Upload file `index.php` to `/public_html/`
+  * [ ]  Optional -> Upload file `README.md` to `/public_html/`
+3. Adjust Database
+  * [ ]  Make a copy of the local site db 
+  * [ ]  IF USING DATED MYSQL -> Convert to UTF8
+  * [ ]  Find and replace local path to server path
+4. In cPanel ...
+  * [ ]  Create new db
+  * [ ]  Create new user 
+  * [ ]  Add user to db
+  * [ ]  Upload adjusted local site db to server db
+5. Update config files
+  * [ ]  Update db credentials in `local-config.php`
+  * [ ]  Set var $local_path to new path in `wp-config.php`
+  * [ ]  Turn off debugger in `wp-config.php`
 If you choose not to follow these steps, you will be unable to keep the repository up-to-date, and you will have to deal with minified and uglified JS and CSS files. See notes under DEV ENVIRONMENT for more info.
 
 
