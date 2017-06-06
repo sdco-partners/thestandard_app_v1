@@ -58,13 +58,14 @@ Copyright 2017 SDCO Partners
 
 ### Starting With [INIT]
 1. CREATE NEW BLANK REPOSITORY
-  * [ ]  Create new blank repo. Do not initiate with a README file.
-  * [ ]  Clone repo to local environment 
+  * [x]  Create new blank repo. Do not initiate with a README file.
+  * [x]  Clone repo to local environment 
 2. CREATE A INIT REMOTE & PULL DOWN INIT FILES
-  * [ ]  Run `git remote add init` + INIT repo url
-  * [ ]  Run `git pull init master`
+  * [x]  Run `git remote add init` + INIT repo url
+  * [x]  Run `git pull init master`
 3. PULL DOWN WORDPRESS SUBMODULE FILES
-  * [ ]  Run `git submodule update --init`
+  * [x]  Run `git submodule update --init`
+
 
 ### Initializing New Project
 Follow these steps to configure your install to your specific project.

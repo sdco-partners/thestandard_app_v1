@@ -16,8 +16,8 @@
 
   /* Define Variables  */
   $GLOBALS['url'] = get_template_directory_uri();
-  $GLOBALS['root'] = '[INIT]';
-  $GLOBALS['docpath'] = $_SERVER['DOCUMENT_ROOT'].'[INIT]';
+  $GLOBALS['root'] = '10.1.10.96/[INIT]';
+  $GLOBALS['docpath'] = $_SERVER['DOCUMENT_ROOT'].'/[INIT]';
 
   /* Add Styles, Fonts, and Javascript */
   function my_enqueue_style() {
@@ -58,8 +58,32 @@
   *
   * shortcut to test function
   */
-  $test = function($var, $mes){
+  function test($var, $mes){
     echo "<script>console.log('".$var.", outputs ".$mes."');</script>";
   }
+
+
+  /**
+  *
+  * Adds option tab
+  *
+  */
+  if( function_exists('acf_add_options_page') ) {
+    
+    acf_add_options_page();
+    
+  }
+
+
+  /**
+  *
+  * Disables Theme Editor
+  *
+  */
+  function remove_editor_menu() {
+    remove_action('admin_menu', '_add_themes_utility_last', 101);
+  }
+  add_action('_admin_menu', 'remove_editor_menu', 1);
+
 
 ?>
