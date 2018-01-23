@@ -66,10 +66,7 @@ Follow these steps to configure your install to your specific project.
   * [ ]  set DB_NAME, DB_USER and DB_PASSWORD
 
 3. PACKAGE.JSON
-  * [ ]  set 'name' 
-  * [ ]  set 'description' 
-  * [ ]  set 'url' for both 'repository' and 'bugs'
-  * [ ]  set 'homepage' 
+  * [ ]  set necessary items ('name', 'description', &c.) 
 
 4. GULPFILE.JS
   * [ ]  set var uri in line 75
@@ -78,13 +75,11 @@ Follow these steps to configure your install to your specific project.
   * [ ]  set filepath to inner CONFIG.PHP on line 75
 
 6. THEME FILES & FOLDERS
-  * [ ]  rename folder 'INIT' 
+  * [ ]  rename folder 'INIT' to theme name
   * [ ]  set 'Theme Name' and 'Theme URI' in STYLE.CSS
-  * [ ]  set var $GLOBALS['root'] and $GLOBALS['docpath'] in FUNCTIONS.PHP
-  * [ ]  set @link and @package notes on all template files.
 
 7. SET UP DUMMY DATABASE
-  * [ ]  create db and user
+  * [ ]  create db and user in phpMyAdmin
   * [ ]  import dummy wordpress db
   
 8. INSTALL DEPENDENCIES 
