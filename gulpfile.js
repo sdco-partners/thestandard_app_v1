@@ -59,19 +59,11 @@ gulp.task('compile', ['lint'], function() {
 		.pipe(babel({
       		presets: ['es2015']
 		}))
-		// .pipe(concat('scripts.js')) <-- concats all files together
+		.pipe(concat('scripts.js'))
 	    .pipe(uglify())
         .pipe(gulp.dest(paths.dest))
 	    .pipe(livereload())
 });
-
-// Run Moderizr on css & js
-gulp.task('modernizr', function() {
-	gulp.src([paths.modCss, paths.modJs])
-    .pipe(modernizr())
-    .pipe(uglify())
-    .pipe(gulp.dest(paths.dest));
-})
 
 // Watch task
 gulp.task('default', function() {
