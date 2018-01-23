@@ -76,11 +76,21 @@ Follow these steps to configure your install to your specific project.
   * [ ]  set `var uri` in line 75
 
 6. Theme Files & Folders
-  * [ ]  rename folder 'INIT' to theme name
+  * [ ]  rename the theme folder from 'INIT' to your theme name
   * [ ]  set 'Theme Name' and 'Theme URI' in STYLE.CSS
   
 7. Install Dependencies
   * [ ]  Run `npm install`
+
+8. Navigate to your local site path (wht you specified in Step 1)
+  * [ ]  Set up Wordpress
+  + [ ]  Login, go to the 'Appearance' tab and activate your theme
+
+9. Push your first commit
+  * [ ]  Run `git status` to see a status
+  * [ ]  Run `git add .`
+  * [ ]  Run `git commit -m"[ YOUR_COMMIT_MESSAGE ]"` 
+  * [ ]  Run `git push origin master` to push your commit to Github
 
 
 ### Editing Current Project
