@@ -63,9 +63,7 @@ Follow these steps to configure your install to your specific project.
 
 2. LOCAL-CONFIG-EXAMPLE.PHP
   * [ ]  remove '-example' from end of filepath
-  * [ ]  set DB_NAME 
-  * [ ]  set DB_USER 
-  * [ ]  set DB_PASSWORD
+  * [ ]  set DB_NAME, DB_USER and DB_PASSWORD
 
 3. PACKAGE.JSON
   * [ ]  set 'name' 
@@ -85,7 +83,7 @@ Follow these steps to configure your install to your specific project.
   * [ ]  set var $GLOBALS['root'] and $GLOBALS['docpath'] in FUNCTIONS.PHP
   * [ ]  set @link and @package notes on all template files.
 
-7. SET UP DUMMY DATABE
+7. SET UP DUMMY DATABASE
   * [ ]  create db and user
   * [ ]  import dummy wordpress db
   
