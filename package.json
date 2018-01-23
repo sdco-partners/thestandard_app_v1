@@ -1,19 +1,19 @@
 {
-  "name": "[ INIT ] ",
+  "name": "Frenchy",
   "version": "1.0.0",
-  "description": "[ ADD_DESCRIPTION ] ",
+  "description": " Frenchy is a site for testers",
   "main": "index.js",
   "scripts": {
     "test": "test"
   },
   "repository": {
     "type": "git",
-    "url": "[ REPO_BUG_URL ] "
+    "url": "http://frenchy.sdcopartners.com "
   },
-  "author": "[ YOUR_NAME ] | SDCO Partners",
+  "author": "Asifuzzaman Ahmed | SDCO Partners",
   "license": "ISC",
   "bugs": {
-    "url": "[ REPO_BUG_URL ]"
+    "url": "http://frenchy.sdcopartners.com/bugs"
   },
   "homepage": "index.js",
   "devDependencies": {
@@ -40,6 +40,7 @@
   "dependencies": {
     "eslint-config-airbnb": "^16.1.0",
     "eslint-plugin-jsx-a11y": "^6.0.2",
-    "eslint-plugin-react": "^7.5.1"
+    "eslint-plugin-react": "^7.5.1",
+    "gulp-eslint": "^4.0.1"
   }
 }
