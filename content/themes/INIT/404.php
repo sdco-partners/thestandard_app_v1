@@ -1,13 +1,13 @@
 <?php
 /**
- * Footer
+ * 404
  *
- * Contans footer assets.
+ * 404 Page.
  *
- * @link [INIT]
+ * @link https://github.com/sdco-partners/Init
  *
- * @package [INIT]
- * @subpackage Wordpress
+ * @package Wordpress
+ * @subpackage 404
  * @since 1.0
  * @version 1.0
  */

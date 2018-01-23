@@ -4,10 +4,10 @@
  *
  * The main template file
  *
- * @link [INIT]
+ * @link https://github.com/sdco-partners/Init
  *
- * @package [INIT]
- * @subpackage Wordpress
+ * @package Wordpress
+ * @subpackage Index
  * @since 1.0
  * @version 1.0
  */

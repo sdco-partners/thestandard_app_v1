@@ -4,10 +4,10 @@
  *
  * Contans footer assets.
  *
- * @link [INIT]
+ * @link https://github.com/sdco-partners/Init
  *
- * @package [INIT]
- * @subpackage Wordpress
+ * @package Wordpress
+ * @subpackage Footer
  * @since 1.0
  * @version 1.0
  */

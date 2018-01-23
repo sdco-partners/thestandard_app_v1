@@ -4,10 +4,10 @@
  *
  * Smart functions
  *
- * @link [INIT]
+ * @link https://github.com/sdco-partners/Init
  *
- * @package [INIT]
- * @subpackage Wordpress
+ * @package Wordpress
+ * @subpackage Functions
  * @since 1.0
  * @version 1.0
  */
