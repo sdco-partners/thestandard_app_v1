@@ -43,15 +43,15 @@ Copyright 2017 SDCO Partners
 ```
 
 ### Starting With A Blank Repo [ INIT ]
-1. CREATE NEW BLANK REPOSITORY
+1. Create a blank repository
   * [ ]  Create new blank repo. Do NOT initiate with a README file.
   * [ ]  `git clone` new repo to local environment 
 
-2. MOVE INTO NEW REPO FOLDER, CREATE A INIT REMOTE AND PULL DOWN INIT FILES
+2. Move into new repo folder, create a remote for INIT repo and pull it down
   * [ ]  Run `git remote add init` + INIT repo url
   * [ ]  Run `git pull init master`
 
-3. PULL DOWN WORDPRESS SUBMODULE FILES
+3. Pull down Wordpress Submodule
   * [ ]  Run `git submodule update --init`
 
 
@@ -65,7 +65,7 @@ Follow these steps to configure your install to your specific project.
   * [ ]  remove '-example' from end of filepath
   * [ ]  set DB_NAME, DB_USER and DB_PASSWORD
 
-3. SET UP DUMMY DATABASE
+3. Set up dummy DB
   * [ ]  create db and user in phpMyAdmin
   * [ ]  import dummy wordpress db
 
@@ -75,11 +75,11 @@ Follow these steps to configure your install to your specific project.
 5. GULPFILE.JS
   * [ ]  set `var uri` in line 75
 
-6. THEME FILES & FOLDERS
+6. Theme Files & Folders
   * [ ]  rename folder 'INIT' to theme name
   * [ ]  set 'Theme Name' and 'Theme URI' in STYLE.CSS
   
-7. INSTALL DEPENDENCIES 
+7. Install Dependencies
   * [ ]  Run `npm install`
 
 
