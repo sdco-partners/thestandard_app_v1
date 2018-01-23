@@ -59,8 +59,7 @@ Copyright 2017 SDCO Partners
 Follow these steps to configure your install to your specific project.
 
 1. WP-CONFIG.PHP
-  * [ ]  set var $local_path 
-  * [ ]  set var $table_prefix  
+  * [ ]  set var $local_path on line 91
 
 2. LOCAL-CONFIG-EXAMPLE.PHP
   * [ ]  remove '-example' from end of filepath
