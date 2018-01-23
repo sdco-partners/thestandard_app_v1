@@ -8,17 +8,18 @@ var gulp = require("gulp")
 , notify = require('gulp-notify')
 , livereload = require('gulp-livereload')
 , babel = require('gulp-babel')
-, modernizr = require('gulp-modernizr');
+, modernizr = require('gulp-modernizr')
+, eslint = require('gulp-eslint');
 
 
 // uri
-var uri = './content/themes/[INIT]';
+var uri = './content/themes/Hay-EGWLF17/';
 
 var paths = {
 	scss: uri.concat('src/sass/**/*.sass'),
 	styles: uri.concat('src/sass/styles.sass'),
 	php: uri.concat('**/*.php'),
-	js: uri.concat('src/js/**/*.js'),
+	js: uri.concat('src/js/*.js'),
 	src: uri.concat('src/js'),
 	dest: uri.concat('prod/'),
 	modJs: uri.concat('prod/scripts-min.js'),
@@ -43,17 +44,25 @@ gulp.task('styles', function() {
 	  .pipe(livereload());
 });
 
-// Uglify JS
-gulp.task('uglify', function() {
+// Lint JS
+gulp.task('lint', function() {
+  return gulp.src([paths.js, '!node_modules/**'])
+    .pipe(eslint())
+    .pipe(eslint.format())
+    .pipe(eslint.failAfterError())
+});
+
+// Compile JS
+gulp.task('compile', ['lint'], function() {
 	gulp.src(paths.js)
 		.pipe(plumber(plumberErrorHandler))
 		.pipe(babel({
-                  presets: ['es2015']
-		  }))
-		.pipe(concat('scripts.js'))
-	  .pipe(uglify())
-	  .pipe(gulp.dest(paths.dest))
-	  .pipe(livereload())
+      		presets: ['es2015']
+		}))
+		// .pipe(concat('scripts.js')) <-- concats all files together
+	    .pipe(uglify())
+        .pipe(gulp.dest(paths.dest))
+	    .pipe(livereload())
 });
 
 // Run Moderizr on css & js
@@ -69,7 +78,7 @@ gulp.task('default', function() {
 	livereload.listen();
 	gulp.watch(paths.php, livereload.reload);
 	gulp.watch(paths.scss, ['styles']);
-	gulp.watch(paths.js, ['uglify']);
+	gulp.watch(paths.js, ['compile']);
 	// gulp.watch([paths.modJs, paths.modCss], ['modernizr']);
 });
 
