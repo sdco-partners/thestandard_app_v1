@@ -24,7 +24,7 @@ Copyright 2017 SDCO Partners
 ### Folder Structer
 
 ```
-|--/[INIT]/
+|--/[ INIT ]/
 |  |
 |  |--/assets/
 |  |
@@ -42,7 +42,7 @@ Copyright 2017 SDCO Partners
 
 ```
 
-### Starting With [INIT]
+### Starting With A Blank Repo [ INIT ]
 1. CREATE NEW BLANK REPOSITORY
   * [ ]  Create new blank repo. Do NOT initiate with a README file.
   * [ ]  `git clone` new repo to local environment 
@@ -50,39 +50,46 @@ Copyright 2017 SDCO Partners
 2. MOVE INTO NEW REPO FOLDER, CREATE A INIT REMOTE AND PULL DOWN INIT FILES
   * [ ]  Run `git remote add init` + INIT repo url
   * [ ]  Run `git pull init master`
-  
+
 3. PULL DOWN WORDPRESS SUBMODULE FILES
   * [ ]  Run `git submodule update --init`
 
 
-### Initializing New Project
+### Initializing New Repo
 Follow these steps to configure your install to your specific project.
 
 1. WP-CONFIG.PHP
   * [ ]  set var $local_path 
   * [ ]  set var $table_prefix  
+
 2. LOCAL-CONFIG-EXAMPLE.PHP
   * [ ]  remove '-example' from end of filepath
   * [ ]  set DB_NAME 
   * [ ]  set DB_USER 
   * [ ]  set DB_PASSWORD
+
 3. PACKAGE.JSON
   * [ ]  set 'name' 
   * [ ]  set 'description' 
   * [ ]  set 'url' for both 'repository' and 'bugs'
   * [ ]  set 'homepage' 
+
 4. GULPFILE.JS
   * [ ]  set var uri in line 75
+
 5. .GITIGNORE
   * [ ]  set filepath to inner CONFIG.PHP on line 75
+
 6. THEME FILES & FOLDERS
   * [ ]  rename folder 'INIT' 
   * [ ]  set 'Theme Name' and 'Theme URI' in STYLE.CSS
   * [ ]  set var $GLOBALS['root'] and $GLOBALS['docpath'] in FUNCTIONS.PHP
   * [ ]  set @link and @package notes on all template files.
+
 7. SET UP DUMMY DATABE
   * [ ]  create db and user
   * [ ]  import dummy wordpress db
+  
 8. INSTALL DEPENDENCIES 
   * [ ]  Run `npm install`
 
