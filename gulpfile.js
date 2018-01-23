@@ -71,6 +71,5 @@ gulp.task('default', function() {
 	gulp.watch(paths.php, livereload.reload);
 	gulp.watch(paths.scss, ['styles']);
 	gulp.watch(paths.js, ['compile']);
-	// gulp.watch([paths.modJs, paths.modCss], ['modernizr']);
 });
 

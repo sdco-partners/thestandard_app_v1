@@ -92,6 +92,10 @@ Follow these steps to configure your install to your specific project.
   * [ ]  Run `git commit -m"[ YOUR_COMMIT_MESSAGE ]"` 
   * [ ]  Run `git push origin master` to push your commit to Github
 
+10. Starting your project
+  * [ ]  Run `gulp`
+  * [ ]  Refresh your page, start writing code ...
+ 
 
 ### Editing Current Project
 Follow these steps to edit a current project. This will set up the repository and compile your JS and Sass files for your.

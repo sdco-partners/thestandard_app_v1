@@ -8,6 +8,7 @@
 !.gitignore
 !.editorconfig
 !readme.md
+!.eslintrc.json
 
 # ignore all files starting with ~
 ~*
