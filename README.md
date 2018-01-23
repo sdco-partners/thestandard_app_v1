@@ -31,29 +31,15 @@ Copyright 2017 SDCO Partners
 |  |--/components/
 |  |
 |  |--/prod/
-|  |  └-- script.js
+|  |  |-- script.js
 |  |  └-- styles.css
 |  |
-|  |--/src/
-|  |  | 
-|  |  |--/js/
-|  |  |  └-- a.js
-|  |  |
-|  |  |--/sass/
-|  |  |  └-- _mixins.sass
-|  |  |  └-- _reset.sass
-|  |  |  └-- _variables.sass
-|  |  |  └-- styles.sass
-|  |  | 
-└-- 404.php
-└-- config.php
-└-- footer.php
-└-- function.php
-└-- header.php
-└-- index.php
-└-- sidebar.php
-└-- README.txt
-└-- style.css 
+|  └--/src/
+|     | 
+|     |--/js/
+|     |
+|     └--/sass/
+|
 ```
 
 ### Starting With [INIT]
