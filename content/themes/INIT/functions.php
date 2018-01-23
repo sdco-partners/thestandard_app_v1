@@ -14,13 +14,13 @@
 
   include 'config.php';
 
-  /* Define Variables  */
-  $DIR = get_template_directory_uri();
 
   /* Add Styles, Fonts, and Javascript */
   function my_enqueue_style() {
-    wp_enqueue_style('styles-min', $DIR.'/prod/styles.css');
-    wp_enqueue_script('scripts-min', $DIR.'/prod/scripts.js', array(), '1.0.0', true);
+    $_DIR = get_template_directory_uri();
+
+    wp_enqueue_style('styles-min', $_DIR.'/prod/styles.css');
+    wp_enqueue_script('scripts-min', $_DIR.'/prod/scripts.js', array(), '1.0.0', true);
   }
   add_action( 'wp_enqueue_scripts', 'my_enqueue_style' );
 
