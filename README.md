@@ -69,7 +69,7 @@ Follow these steps to configure your install to your specific project.
   * [ ]  set necessary items ('name', 'description', &c.) 
 
 4. GULPFILE.JS
-  * [ ]  set var uri in line 75
+  * [ ]  set `var uri` in line 75
 
 5. .GITIGNORE
   * [ ]  set filepath to inner CONFIG.PHP on line 75

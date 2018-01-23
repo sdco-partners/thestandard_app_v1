@@ -13,7 +13,7 @@ var gulp = require("gulp")
 
 
 // uri
-var uri = './content/themes/Hay-EGWLF17/';
+var uri = './content/themes/[ INIT ]/';
 
 var paths = {
 	scss: uri.concat('src/sass/**/*.sass'),
