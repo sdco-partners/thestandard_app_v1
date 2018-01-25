@@ -1,5 +1,5 @@
 {
-  "name": "Frenchy",
+  "name": "[ INIT ]",
   "version": "1.0.0",
   "description": " Frenchy is a site for testers",
   "main": "index.js",
@@ -8,12 +8,12 @@
   },
   "repository": {
     "type": "git",
-    "url": "http://frenchy.sdcopartners.com "
+    "url": "[ INIT ] "
   },
-  "author": "Asifuzzaman Ahmed | SDCO Partners",
+  "author": "[ INIT ] | SDCO Partners",
   "license": "ISC",
   "bugs": {
-    "url": "http://frenchy.sdcopartners.com/bugs"
+    "url": "[ INIT ]/bugs"
   },
   "homepage": "index.js",
   "devDependencies": {
