@@ -12,8 +12,6 @@
  * @version 1.0
  */
 
-  include 'config.php';
-
 
   /* Add Styles, Fonts, and Javascript */
   function my_enqueue_style() {
