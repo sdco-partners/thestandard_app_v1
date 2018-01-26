@@ -117,6 +117,9 @@ if (!defined('WP_DEBUG')) {
 	define('WP_DEBUG', true);
 }
 
+/* Prevent coding edits from CMS */
+define( 'DISALLOW_FILE_EDIT', true );
+
 /* That's all, stop editing! Happy blogging. */
 
 /** Absolute path to the WordPress directory. */
