@@ -73,7 +73,7 @@ Follow these steps to configure your install to your specific project.
   * [ ]  set necessary items ('name', 'description', &c.) 
 
 5. GULPFILE.JS
-  * [ ]  set `var uri` in line 75
+  * [ ]  set `var uri` in line 16
 
 6. Theme Files & Folders
   * [ ]  rename the theme folder from 'INIT' to your theme name
