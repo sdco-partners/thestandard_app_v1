@@ -191,6 +191,7 @@ For All other files ...
 
 ### Feature Documentation
 
+#### ReST API 
 
 ## Known Bugs
 
