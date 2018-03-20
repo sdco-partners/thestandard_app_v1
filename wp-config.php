@@ -88,7 +88,7 @@ define('WPLANG', '');
  * These are required because wordpress is installed in a subdirectory.
  */
 
-$local_path = 'localhost/[ INIT ]';
+$local_path = 'localhost/thestandard_app_v18';
 // $_SERVER['SERVER_NAME']
 
 

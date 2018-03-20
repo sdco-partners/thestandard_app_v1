@@ -1,19 +1,19 @@
 {
-  "name": "[ INIT ]",
+  "name": "TheStandardJamesIslandAPPv2018",
   "version": "1.0.0",
-  "description": " Frenchy is a site for testers",
+  "description": " The Standard James Island Application v2018",
   "main": "index.js",
   "scripts": {
     "test": "test"
   },
   "repository": {
     "type": "git",
-    "url": "[ INIT ] "
+    "url": "https://thestandardjamesisland.com/"
   },
-  "author": "[ INIT ] | SDCO Partners",
+  "author": "Asifuzzaman Ahmed | SDCO Partners",
   "license": "ISC",
   "bugs": {
-    "url": "[ INIT ]/bugs"
+    "url": "https://github.com/sdco-partners/thestandard_app_v18/issues"
   },
   "homepage": "index.js",
   "devDependencies": {
