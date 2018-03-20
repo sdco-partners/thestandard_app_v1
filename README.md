@@ -1,5 +1,5 @@
-# [ INIT ]
-Copyright 2017 SDCO Partners
+# The Standard James Island APP v2018
+Copyright 2018 SDCO Partners
 
 1. Getting Started 
   * Folder Structure
@@ -34,11 +34,34 @@ Copyright 2017 SDCO Partners
 |  |  |-- script.js
 |  |  └-- styles.css
 |  |
-|  └--/src/
+|  |--/src/
+|  |  | 
+|  |  |--/js/
+|  |  |
+|  |  └--/sass/
+|  |
+|  └--/rest/
 |     | 
-|     |--/js/
+|     |--/data/
+|     |  └-- units.php
 |     |
-|     └--/sass/
+|     |--/rest_helpers/
+|     |  └-- models.php
+|     |
+|     └--/soap_helpers/
+|     |  |-- floorplans.php
+|     |  └-- parameters.php
+|     |
+|     |-- index.php
+|     |
+|     |-- MyAPI.php
+|     |-- RestAPI.php
+|     |
+|     |-- MyController.php
+|     |-- SoapController.php
+|     |
+|     |-- RealPageAPI.php
+|     |-- SoapAPI.php
 
 ```
 
@@ -174,7 +197,7 @@ For All other files ...
 
 ## Team 
   
-  * PROJECT MANAGER   :   
-  * UX/UI DESIGNER    :   
-  * DEVELOPER         :   
+  * PROJECT MANAGER   :   LUCY NOBLE
+  * UX/UI DESIGNER    :   n/a
+  * DEVELOPER         :   ASIFUZZAMAN AHMED
 
