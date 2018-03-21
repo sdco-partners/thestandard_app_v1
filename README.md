@@ -201,7 +201,15 @@ For All other files ...
 
 ![API Diagram](https://thestandardjamesisland.com/content/themes/standard/assets/images/diagram-rest.png)
 
-The Standard uses SOAP API to pull property data from the Real Page database. Because of the bandwidth limitations of this API, we've build a secondary rest API that serves up saved copies of that Real Page data.
+The Standard James Island uses a SOAP API to pull property data from the Real Page database. Because of the bandwidth/scheduling limitations of this API, we've built a secondary rest API that serves up saved copies of this Real Page data.
+
+Accessing the API paths can be done by including the following URL parameters:
+
+  * For all units: `http://localhost/thestandard-v2/rest/example/?request=[ UNITS ]&apiKey=[ your_api_key ]&user=[ your_user_name ]&token=[ your_token ]` 
+
+  * For units by name: `http://localhost/thestandard-v2/rest/example/?request=[ UNITSBY ]&type=[ NAME ]&filter[ your_floorplan_name ]&apiKey=[ your_api_key ]&user=[ your_user_name ]&token=[ your_token ]` 
+
+  * For units by floor: `http://localhost/thestandard-v2/rest/example/?request=[ UNITSBY ]&type=[ FLOOR ]&filter[ your_floor_number ]&apiKey=[ your_api_key ]&user=[ your_user_name ]&token=[ your_token ]` 
 
 ## Known Bugs
 
