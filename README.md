@@ -199,7 +199,7 @@ For All other files ...
 
 #### ReST API 
 
-![API Diagram]: (https://thestandardjamesisland.com/content/themes/standard/assets/images/diagram-rest.gif)
+![API Diagram]: (https://thestandardjamesisland.com/content/themes/standard/assets/images/diagram-rest.png)
 
 The Standard uses SOAP API to pull property data from the Real Page database. Because of the bandwidth limitations of this API, we've build a secondary rest API that serves up saved copies of that Real Page data.
 
