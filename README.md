@@ -198,6 +198,7 @@ For All other files ...
 ### Feature Documentation
 
 #### ReST API 
+
 [api_diagram]: https://drive.google.com/file/d/11AxheQKsUbOT5pmwCkqRr7wTSXjoxh4O/view?usp=sharing "API Diagram"
 
 The Standard uses SOAP API to pull property data from the Real Page database. Because of the bandwidth limitations of this API, we've build a secondary rest API that serves up saved copies of that Real Page data.
