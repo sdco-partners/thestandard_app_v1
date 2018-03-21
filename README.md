@@ -205,11 +205,11 @@ The Standard James Island uses a SOAP API to pull property data from the Real Pa
 
 Accessing the API paths can be done by including the following URL parameters:
 
-  * For all units: `[ site ]/rest/example/?request=[ UNITS ]&apiKey=[ your_api_key ]&user=[ your_user_name ]&token=[ your_token ]` 
+  * For all units: `[ site ]/rest/?request=[ UNITS ]&apiKey=[ your_api_key ]&user=[ your_user_name ]&token=[ your_token ]` 
 
-  * For units by name: `[ site ]/rest/example/?request=[ UNITSBY ]&type=[ NAME ]&filter[ your_floorplan_name ]&apiKey=[ your_api_key ]&user=[ your_user_name ]&token=[ your_token ]` 
+  * For units by name: `[ site ]/rest/?request=[ UNITSBY ]&type=[ NAME ]&filter[ your_floorplan_name ]&apiKey=[ your_api_key ]&user=[ your_user_name ]&token=[ your_token ]` 
 
-  * For units by floor: `[ site ]/rest/example/?request=[ UNITSBY ]&type=[ FLOOR ]&filter[ your_floor_number ]&apiKey=[ your_api_key ]&user=[ your_user_name ]&token=[ your_token ]` 
+  * For units by floor: `[ site ]/rest/?request=[ UNITSBY ]&type=[ FLOOR ]&filter[ your_floor_number ]&apiKey=[ your_api_key ]&user=[ your_user_name ]&token=[ your_token ]` 
 
 ## Known Bugs
 
