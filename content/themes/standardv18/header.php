@@ -1,124 +1,91 @@
 <!DOCTYPE html>
 <html>
-<head>
-    <!-- Google Tag Manager -->
-    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-    })(window,document,'script','dataLayer','GTM-KL7B24J');</script>
-    <!-- End Google Tag Manager -->
-    <!-- meta -->
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width">
-    <link rel="shortcut icon" href="<?php bloginfo('template_directory') ?>/assets/images/favicon.png"> 
-    <!-- css -->
-    <link rel="stylesheet" href="<?php bloginfo('template_directory') ?>/assets/css/reset.css" type="text/css" media="screen">
-    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.3.15/slick.css">
-    <link rel="stylesheet" href="<?php bloginfo('template_directory') ?>/assets/css/style.css" type="text/css" media="screen">
-    <!-- fonts -->
-    <link rel="stylesheet" type="text/css" href="//cloud.typography.com/778678/782426/css/fonts.css" />
-    <link href="//cloud.webtype.com/css/4baffe8e-471a-4bd7-9f9d-4db342c3aeb6.css" rel="stylesheet" type="text/css" />
-    <link rel="stylesheet" href="https://use.typekit.net/dqy0grv.css">
-    <script>try{Typekit.load();}catch(e){}</script>
-    <!-- js -->
-    <script src="//cdnjs.cloudflare.com/ajax/libs/modernizr/2.7.1/modernizr.min.js" type="text/javascript" charset="utf-8"></script>
-    <!-- IE -->
-    <!--[if IE]><script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7/html5shiv.js" type="text/javascript" charset="utf-8"></script><![endif]-->
-    <?php wp_head() ?>
-    <?php get_template_part('analytics'); ?>
+    <head>
+        <!-- Google Tag Manager -->
+        <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+        new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+        j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+        'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+        })(window,document,'script','dataLayer','GTM-KL7B24J');</script>
+        <!-- End Google Tag Manager -->
+        <!-- meta -->
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width">
+        <link rel="shortcut icon" href="<?php bloginfo('template_directory') ?>/assets/images/favicon.png"> 
+        <!-- css -->
+        <link rel="stylesheet" href="<?php bloginfo('template_directory') ?>/assets/css/reset.css" type="text/css" media="screen">
+        <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.3.15/slick.css">
+        <link rel="stylesheet" href="<?php bloginfo('template_directory') ?>/assets/css/style.css" type="text/css" media="screen">
+        <!-- fonts -->
+        <link rel="stylesheet" type="text/css" href="//cloud.typography.com/778678/782426/css/fonts.css" />
+        <link href="//cloud.webtype.com/css/4baffe8e-471a-4bd7-9f9d-4db342c3aeb6.css" rel="stylesheet" type="text/css" />
+        <link rel="stylesheet" href="https://use.typekit.net/dqy0grv.css">
+        <script>try{Typekit.load();}catch(e){}</script>
+        <!-- js -->
+        <script src="//cdnjs.cloudflare.com/ajax/libs/modernizr/2.7.1/modernizr.min.js" type="text/javascript" charset="utf-8"></script>
+        <!-- IE -->
+        <!--[if IE]><script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7/html5shiv.js" type="text/javascript" charset="utf-8"></script><![endif]-->
+        <?php wp_head() ?>
+        <?php get_template_part('analytics'); ?>
 
-<meta content="-1" http-equiv="Expires" />
-<meta content="no-cache" http-equiv="Pragma" />
-<meta name="classification" content="apartments"/>
-<meta name="rating" content="General" />
-<meta name="revisit-after" content="30 days" />
-<meta name="robots" content="ALL" />
-<meta name="googlebot" content="index, follow" />
-<meta name="msnbot" content="index, follow" />
-<meta name="distribution" content="global" />
-<meta content="en-us" http-equiv="Content-Language" />
-<meta content="us" http-equiv="dialect" />
-<meta content="text/html; charset=iso-8859-1" http-equiv="Content-Type" />
-<meta name="author" content="RC" />
-<meta name="document-state" content="Dynamic" />
-<meta name="rating" content="Business" />
-<meta name="og:street-address" content="215 Vista Drive"/>
-<meta name="og:locality" content="Charleston"/>
-<meta name="og:region" content="SC"/>
-<meta name="og:postal-code" content="29414"/>
-<meta name="og:country-name" content="USA"/>
-<script type='application/ld+json'> 
-{
-  "@context": "http://www.schema.org",
-  "@type": "RealEstateAgent",
-  "name": "The Standard James Island",
-  "url": "https://thestandardjamesisland.com/",
-  "logo": "https://thestandardjamesisland.com/content/themes/standard/assets/images/logo.png",
-  "image": "https://thestandardjamesisland.com/content/uploads/bfi_thumb/300dpi-2015-11_17-_-%C2%A9RMP-_-The-Standard-James-Island-_-3076-ml9y9ij27zgaxlxl0i524n9sphyvo46sqc6rgzd5js.jpg",
-  "description": "The Standard James Island Life and Style offers an urban experience that is close to nature. ",
-  "address": {
-    "@type": "PostalAddress",
-    "streetAddress": "215 Promenade Vista Street",
-    "addressLocality": "Charleston",
-    "addressRegion": "SC",
-    "postalCode": "29412",
-    "addressCountry": "United States"
-  },
-  "hasMap": "https://goo.gl/maps/nGiQM94nTnC2",
-  "openingHours": "Mo, Tu, We, Th, Fr 09:00-18:00 Sa 10:00-17:00 Su 13:00-17:00",
-  "contactPoint": {
-    "@type": "ContactPoint",
-    "telephone": "(888) 781-7508",
-    "contactType": " Customer Service "
-  }
-}
- </script>
-</head>
-<body id="standard" <?php body_class(); ?>>
-<!-- Google Tag Manager (noscript) -->
-<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KL7B24J"
-height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-<!-- End Google Tag Manager (noscript) -->
+        <meta content="-1" http-equiv="Expires" />
+        <meta content="no-cache" http-equiv="Pragma" />
+        <meta name="classification" content="apartments"/>
+        <meta name="rating" content="General" />
+        <meta name="revisit-after" content="30 days" />
+        <meta name="robots" content="ALL" />
+        <meta name="googlebot" content="index, follow" />
+        <meta name="msnbot" content="index, follow" />
+        <meta name="distribution" content="global" />
+        <meta content="en-us" http-equiv="Content-Language" />
+        <meta content="us" http-equiv="dialect" />
+        <meta content="text/html; charset=iso-8859-1" http-equiv="Content-Type" />
+        <meta name="author" content="RC" />
+        <meta name="document-state" content="Dynamic" />
+        <meta name="rating" content="Business" />
+        <meta name="og:street-address" content="215 Vista Drive"/>
+        <meta name="og:locality" content="Charleston"/>
+        <meta name="og:region" content="SC"/>
+        <meta name="og:postal-code" content="29414"/>
+        <meta name="og:country-name" content="USA"/>
+        <script type='application/ld+json'> 
+            {
+              "@context": "http://www.schema.org",
+              "@type": "RealEstateAgent",
+              "name": "The Standard James Island",
+              "url": "https://thestandardjamesisland.com/",
+              "logo": "https://thestandardjamesisland.com/content/themes/standard/assets/images/logo.png",
+              "image": "https://thestandardjamesisland.com/content/uploads/bfi_thumb/300dpi-2015-11_17-_-%C2%A9RMP-_-The-Standard-James-Island-_-3076-ml9y9ij27zgaxlxl0i524n9sphyvo46sqc6rgzd5js.jpg",
+              "description": "The Standard James Island Life and Style offers an urban experience that is close to nature. ",
+              "address": {
+                "@type": "PostalAddress",
+                "streetAddress": "215 Promenade Vista Street",
+                "addressLocality": "Charleston",
+                "addressRegion": "SC",
+                "postalCode": "29412",
+                "addressCountry": "United States"
+              },
+              "hasMap": "https://goo.gl/maps/nGiQM94nTnC2",
+              "openingHours": "Mo, Tu, We, Th, Fr 09:00-18:00 Sa 10:00-17:00 Su 13:00-17:00",
+              "contactPoint": {
+                "@type": "ContactPoint",
+                "telephone": "(888) 781-7508",
+                "contactType": " Customer Service "
+              }
+            }
+        </script>
+    </head>
+    <body id="standard" <?php body_class(); ?>>
+        <!-- Google Tag Manager (noscript) -->
+        <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KL7B24J"
+        height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+        <!-- End Google Tag Manager (noscript) -->
 
-<?php if( is_front_page() && get_field('popdown') ): ?>
-  <div id="popdown">
-    <div class="popdown-close">╳</div>
-    <div class="popdown-text"><?php the_field('popdown_text'); ?></div>
-    <a class="popdown-link" href="<?php echo get_page_link(2); ?>">View Floor Plans</a>
-  </div>
-<?php endif; ?>
+        <?php if( is_front_page() && get_field('popdown') ) {
+            include( locate_template( "components/head/popdown.php" ) ); 
+        }; ?>
 
-    <header class="main-header">
-        <div class="gradient"></div>
-        <div class="layout-table">
-            <div class="layout-td logo">
-                <a href="<?php bloginfo('url') ?>"><img src="<?php bloginfo('template_directory') ?>/assets/images/logo.png" height="45" width="290" alt="The Standard"></a>
-            </div>
-            <a href="#mobile-menu" class="mobile-menu-toggle js-menu-toggle">Menu</a>
-            <div id="mobile-menu" class="mobile-menu">
-                <div class="mobile-center">
-                    <div class="layout-td primary-navigation">
-                        <a href="#mobile-menu" class="close-menu js-menu-toggle">x</a>
-                        <nav>
-                            <a href="<?php echo get_page_link(2) ?>" <?php echo (is_page(2)) ? 'class="active"' : '' ?>>Floor Plans</a>
-                            <a href="<?php echo get_page_link(6) ?>" <?php echo (is_page(6)) ? 'class="active"' : '' ?>>Life+Style</a>
-                            <a href="<?php echo get_page_link(8) ?>" <?php echo (is_page(8)) ? 'class="active"' : '' ?>>Neighborhood</a>
-                            <a href="<?php echo get_permalink(sj_find_first_gallery()) ?>" <?php echo (is_singular('gallery')) ? 'class="active"' : '' ?>>Gallery</a>
-                            <a href="<?php echo get_page_link(608) ?>" <?php echo (is_page(608)) ? 'class="active"' : '' ?>>Virtual Tour</a>
-                            <a href="<?php echo get_page_link(12) ?>" <?php echo (is_page(12)) ? 'class="active"' : '' ?>>Connect</a>
-                        </nav>
-                    </div>
-                    <div class="layout-td etc">
-                        <div class="portal">
-                            <a href="https://property.onesite.realpage.com/welcomehome?siteid=3603334" taget="_blank">resident portal</a>
-                        </div>
-                        <div class="crest">
-                            <img src="<?php bloginfo('template_directory') ?>/assets/images/crest.png" height="22" width="65" alt="2015">
-                        </div>
-                    </div>
-                </div>
-            </div>
-            
-        </div>
-    </header>
+        <header class="main-header">
+            <?php include( locate_template( "components/head/gradient.php" ) ); 
+            include( locate_template( "components/head/layout.php" ) ); ?>
+        </header>
