@@ -6,7 +6,7 @@
 const addEvents = {
     toClass( {
         trigger,
-        target,
+        target = null,
         type = "click",
         callback,
     } = {} ) {
@@ -14,7 +14,8 @@ const addEvents = {
         Array.prototype.forEach.call( $trigger, ( $el ) => {
             $el.addEventListener( type, ( e ) => {
                 e.preventDefault();
-                callback( $trigger, target );
+                const $target = document.getElementById( target );
+                callback( $trigger, $target );
             } );
         } );
     },
@@ -27,7 +28,8 @@ const addEvents = {
         const $trigger = document.getElementById( trigger );
         $trigger.addEventListener( type, ( e ) => {
             e.preventDefault();
-            callback( $trigger, target );
+            const $target = document.getElementById( target );
+            callback( $trigger, $target );
         } );
     },
 };
@@ -39,8 +41,7 @@ const toggleMobileMenu = () => {
     addEvents.toClass( {
         trigger: "js-menu-toggle",
         target: "mobile-menu",
-        callback: ( $trigger, target ) => {
-            const $target = document.getElementById( target );
+        callback: ( $trigger, $target ) => {
             $target.classList.toggle( "open" );
         },
     } );
@@ -53,8 +54,7 @@ const toggleMap = () => {
     addEvents.toID( {
         trigger: "toggle-map",
         target: "maps",
-        callback: ( $trigger, target ) => {
-            const $target = document.getElementById( target );
+        callback: ( $trigger, $target ) => {
             $trigger.classList.toggle( "has-arrow-down" );
             $trigger.classList.toggle( "has-arrow-up" );
             $target.classList.toggle( "hidden" );
@@ -63,10 +63,31 @@ const toggleMap = () => {
 };
 
 /*
-* Scroll Down
+* Scroll Trigger
 */
-const scrollDown = () => {
+const scroll = {
+    trigger( trigger, target ) {
+        addEvents.toClass( {
+            trigger,
+            target,
+            callback: ( $trigger, $target ) => {
+                this.to( $target );
+            },
+        } );
+    },
+    to( $target ) {
+        const { top } = $target.getBoundingClientRect();
+        document.body.scrollTop = top;
+        document.documentElement.scrollTop = top;
+    },
+};
 
+/*
+* scrollOnNavigate
+*/
+const scrollNavigate = () => {
+    const target = document.getElementById( "navigate" ).attr( "href" );
+    scroll.trigger( "navigate", target );
 };
 
 // $( ".navigate" ).on( "click", ( event ) => {
@@ -315,6 +336,6 @@ document.onreadystatechange = () => {
         toggleMap();
 
         // scroll
-        scrollDown();
+        scrollNavigate();
     }
 };
