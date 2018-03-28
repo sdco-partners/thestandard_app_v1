@@ -12,8 +12,8 @@
 		# register
 		wp_register_script('slick','//cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.3.15/slick.min.js',array('jquery'),'1.3.15',true);
 		wp_register_script( 'mustache', '//cdnjs.cloudflare.com/ajax/libs/mustache.js/0.8.1/mustache.min.js', false, '0.8.1', true );
-		wp_register_script('site',get_bloginfo('template_directory').'/assets/js/site.js',array('jquery','jquery-ui-core','jquery-ui-draggable','slick'),false,true);
-		wp_register_script('soap',get_bloginfo('template_directory').'/assets/js/soap_methods.js',array('jquery'),false,true);
+		wp_register_script('site',get_bloginfo('template_directory').'/prod/scripts.js',array('jquery','jquery-ui-core','jquery-ui-draggable','slick'),false,true);
+		// wp_register_script('soap',get_bloginfo('template_directory').'/assets/js/soap_methods.js',array('jquery'),false,true);
 
 		# enqueue
 		wp_enqueue_script('jquery');

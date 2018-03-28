@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <?php include( locate_template( "components/head/popdown.php" ) ); ?>
+        <?php include( locate_template( "components/head/meta.php" ) ); ?>
     </head>
     <body id="standard" <?php body_class(); ?>>
         <!-- Google Tag Manager (noscript) -->

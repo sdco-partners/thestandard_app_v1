@@ -1,3 +1,8 @@
+<?php
+  /*
+  * Section =>  CONTACT INFO
+  */
+?>
 <div class="layout-td col-1">
     <div class="info">
         <address><?php echo get_field("contact_address", "options"); ?></address>
