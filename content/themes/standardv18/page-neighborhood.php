@@ -5,13 +5,17 @@
  *
  */
 
-get_header(); ?>
-	<?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
-		<?php $images = get_field('header_images') ?>
+get_header();
+if ( have_posts() ) : 
+	while ( have_posts() ) : 
+		the_post();
+		$images = get_field('header_images') ?>
+
 		<div class="page-about">
 			<div class="page-opening">
 				<nav class="pager">
-					<a href="#" id="opening-left" class="ir arrow left">left</a><a href="#" id="opening-right" class="ir arrow right">right</a>
+					<a href="#" id="opening-left" class="ir arrow left">left</a>
+					<a href="#" id="opening-right" class="ir arrow right">right</a>
 				</nav>
 				<div class="content">
 					<div class="col">
@@ -261,5 +265,6 @@ get_header(); ?>
 				</div>
 			</div>
 		</div>
-	<?php endwhile; endif; ?>
-<?php get_footer(); ?>
+	<?php endwhile; 
+endif;
+get_footer();

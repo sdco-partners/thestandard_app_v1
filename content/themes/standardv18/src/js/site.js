@@ -11,26 +11,30 @@ const addEvents = {
         callback,
     } = {} ) {
         const $trigger = document.getElementsByClassName( trigger );
-        Array.prototype.forEach.call( $trigger, ( $el ) => {
-            $el.addEventListener( type, ( e ) => {
-                e.preventDefault();
-                const $target = document.getElementById( target );
-                callback( $trigger, $target );
+        if ( $trigger && $trigger.length > 0 ) {
+            Array.prototype.forEach.call( $trigger, ( $el ) => {
+                $el.addEventListener( type, ( e ) => {
+                    e.preventDefault();
+                    const $target = document.getElementById( target );
+                    callback( $trigger, $target );
+                } );
             } );
-        } );
+        }
     },
     toID( {
         trigger,
-        target,
+        target = null,
         type = "click",
         callback,
     } = {} ) {
         const $trigger = document.getElementById( trigger );
-        $trigger.addEventListener( type, ( e ) => {
-            e.preventDefault();
-            const $target = document.getElementById( target );
-            callback( $trigger, $target );
-        } );
+        if ( $trigger ) {
+            $trigger.addEventListener( type, ( e ) => {
+                e.preventDefault();
+                const $target = document.getElementById( target );
+                callback( $trigger, $target );
+            } );
+        }
     },
 };
 
@@ -66,6 +70,8 @@ const toggleMap = () => {
 * Scroll Trigger
 */
 const scroll = {
+    curr: 0,
+    end: 0,
     trigger( trigger, target ) {
         addEvents.toClass( {
             trigger,
@@ -76,9 +82,16 @@ const scroll = {
         } );
     },
     to( $target ) {
-        const { top } = $target.getBoundingClientRect();
-        document.body.scrollTop = top;
-        document.documentElement.scrollTop = top;
+        this.end = $target.getBoundingClientRect().top;
+        setTimeout( this.moveScroll.bind( this ), 20 );
+    },
+    moveScroll() {
+        this.curr += 50;
+        document.body.scrollTop = this.curr;
+        document.documentElement.scrollTop = this.curr;
+        if ( this.curr < this.end ) {
+            setTimeout( this.moveScroll.bind( this ), 20 );
+        }
     },
 };
 
@@ -86,17 +99,182 @@ const scroll = {
 * scrollOnNavigate
 */
 const scrollNavigate = () => {
-    const target = document.getElementById( "navigate" ).attr( "href" );
-    scroll.trigger( "navigate", target );
+    const $navigate = document.getElementsByClassName( "navigate" );
+    if ( $navigate && $navigate.length > 0 ) {
+        const { href } = $navigate[ 0 ];
+        const target = href.split( "#" )[ 1 ];
+        scroll.trigger( "navigate", target );
+    }
 };
 
-// $( ".navigate" ).on( "click", ( event ) => {
-//     event.preventDefault();
-//     const $target = $( $( this ).attr( "href" ) );
-//     console.log( "this href", $( this ).attr( "class" ) );
-//     scrollTo( $target );
-// } );
+/*
+* Prevent Drag
+*/
+const draggable = () => {
+    const $dragmap = document.getElementById( "dragmap" );
+    if ( $dragmap && $dragmap.draggable ) {
+        $dragmap.draggable( {
+            containment: ".map-contanier",
+            scroll: false,
+        } );
+    }
+};
 
+/*
+* Popdown Logic
+*/
+const popDownLogic = () => {
+    const $popDown = document.getElementById( "popdown" );
+    if ( $popDown ) {
+        setTimeout( () => {
+            $popDown.classList.add( "active" );
+        }, 1200 );
+    }
+    addEvents.toClass( {
+        trigger: "popdown-close",
+        target: "popdown",
+        callback: ( $trigger, $target ) => {
+            $target.classList.remove( "active" );
+        },
+    } );
+};
+
+/*
+* slideShow
+*/
+class SlideShow {
+    constructor( {
+        target,
+        timer = 6000,
+        indx = 0,
+        pause = false,
+        bttnNext = `${ target }-right`,
+        bttnPrev = `${ target }-right`,
+    } ) {
+        Object.assign( this, {
+            timer,
+            indx,
+            pause,
+        } );
+        this.$gallery = document.getElementById( target );
+        this.slides = this.$gallery.children;
+        this.timer = timer;
+        this.$bttnPrev = document.getElementById( bttnPrev );
+        this.$bttnPrev.addEventListener( "click", ( e ) => {
+            e.preventDefault();
+            this.onClick( "left" );
+        } );
+        this.$bttnNext = document.getElementById( bttnNext );
+        this.$bttnNext.addEventListener( "click", ( e ) => {
+            e.preventDefault();
+            this.onClick( "right" );
+        } );
+    }
+
+    start() {
+        this.changeSlide();
+        this.countDown();
+    }
+
+    changeSlide() {
+        Array.prototype.forEach.call( this.slides, ( slide, indx ) => {
+            if ( indx > this.indx ) this.addFade( slide );
+            else this.removeFade( slide );
+        } );
+    }
+
+    resetSlides() {
+        Array.prototype.forEach.call( this.slides, ( slide ) => {
+            slide.classList.remove( "fade" );
+        } );
+    }
+
+    static removeFade( slide ) {
+        slide.classList.remove( "fade" );
+    }
+
+    static addFade( slide ) {
+        slide.classList.add( "fade" );
+    }
+
+    onClick( direction ) {
+        switch ( direction ) {
+        case "left":
+            this.setPause();
+            this.prev();
+            this.changeSlide();
+            break;
+        case "right":
+            this.setPause();
+            this.next();
+            this.changeSlide();
+            break;
+        default:
+            this.changeSlide();
+        }
+    }
+
+    next() {
+        this.indx += 1;
+        this.checkIndx();
+    }
+
+    prev() {
+        this.indx -= 1;
+        this.checkIndx();
+    }
+
+    checkIndx() {
+        if ( this.indx < 0 ) {
+            this.indx = this.slides.length - 1;
+        } else if ( this.indx > this.slides.length - 1 ) {
+            this.indx = 0;
+        }
+    }
+
+    setPause( pauseTime = 6000 ) {
+        if ( !this.pause ) {
+            this.pause = true;
+            setTimeout( () => {
+                this.pause = false;
+            }, pauseTime );
+        }
+    }
+
+    resetTime( time = 6000 ) {
+        this.timer = time;
+    }
+
+    spendTime() {
+        this.timer -= 1000;
+    }
+
+    countDown() {
+        if ( this.timer === 0 ) {
+            this.next();
+            this.changeSlide();
+            this.resetTime();
+        } else if ( !this.pause ) {
+            this.spendTime();
+        }
+        setTimeout( this.countDown.bind( this ), 1000 );
+    }
+}
+/*
+* Initiate Slider
+*/
+const initSlider = () => {
+    const $galleryImages = document.getElementById( "gallery-images" );
+    if ( $galleryImages ) {
+        const gallery = new SlideShow( "gallery-sliders" );
+        gallery.start();
+    }
+    const $headerSlides = document.getElementById( "header-slides" );
+    if ( $headerSlides ) {
+        const headerGallery = new SlideShow( "header-slides" );
+        headerGallery.start();
+    }
+};
 // jQuery( document ).ready( ( $ ) => {
 //     /*
 //     * Mobile Menu
@@ -331,11 +509,20 @@ const scrollNavigate = () => {
 
 document.onreadystatechange = () => {
     if ( document.readyState === "complete" ) {
-        // toggle classes
+        // menu
         toggleMobileMenu();
-        toggleMap();
 
-        // scroll
+        // navigation
         scrollNavigate();
+
+        // map
+        toggleMap();
+        draggable();
+
+        // Popdown
+        popDownLogic();
+
+        // Slick
+        initSlider();
     }
 };
